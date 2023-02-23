@@ -5,7 +5,7 @@ namespace StudyCase.Pages.ExcepCustomer;
 
 public class IndexModel : PageModel
 {
-    public List<Entity.ExcepCustomer> Data { get; set; }
+    public List<Entity.ExcepCust01> Data { get; set; }
     public void OnGet()
     {
         CustomerService service = new CustomerService();
