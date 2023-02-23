@@ -1,0 +1,31 @@
+@page
+@model StudyCase.Pages.ExcepCustomer.IndexModel
+
+@{
+    Layout = "Shared/_Layout";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>No Customer</th>
+                    <th>Nama Customer</th>
+                    <th>Tanggal</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                    <th>Last Update</th>
+                    <th>Updated By</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.Data)
+                {
+                    
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
