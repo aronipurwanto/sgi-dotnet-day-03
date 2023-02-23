@@ -7,9 +7,12 @@ namespace StudyCase.Pages.ExcepCust;
 
 public class IndexCust01Model : PageModel
 {
+    // data binding
     public List<ExcepCust01> Data { get; set; }
+    // dbservice
     public DbCustService dbService { get; set; }
     
+    // contructor
     public IndexCust01Model(StudyCaseDbContext context)
     {
         dbService = new DbCustService(context);

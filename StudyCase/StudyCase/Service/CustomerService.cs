@@ -13,7 +13,7 @@ public class CustomerService
         var data = this.GetExcepData()
             .Where(x => x.CustomerNumber.Equals(Data.CustomerNumber) && x.CustomerDate.Equals(customerDate))
             .SingleOrDefault();
-        data.Status = Data.Status;
+        data.TindakLanjutId = Data.Status;
         // context 
         // context.saveChanges();
         
@@ -23,14 +23,14 @@ public class CustomerService
     public List<ExcepCust01> GetExcepDataJoin()
     {
         var query = (from cus in this.GetExcepData()
-            join status in this.GetStatusTindakLanjut() on cus.Status equals status.Id
+            join status in this.GetStatusTindakLanjut() on cus.TindakLanjutId equals status.Id
             select new Entity.ExcepCust01()
             {
                 TindakLanjut = status,
                 CustomerNumber = cus.CustomerNumber,
                 CustomerName = cus.CustomerName,
                 CustomerDate = cus.CustomerDate,
-                Status = cus.Status,
+                TindakLanjutId = cus.TindakLanjutId,
                 Notes = cus.Notes,
                 LastUpdatedBy = cus.LastUpdatedBy,
                 LastUpdatedAt = cus.LastUpdatedAt

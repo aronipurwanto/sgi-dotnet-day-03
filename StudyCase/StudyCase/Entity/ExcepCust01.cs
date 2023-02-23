@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudyCase.Entity;
 
-[Table(("tbl_excep_cust01"))]
+[Table(("tbl_excep_cus01"))]
 public class ExcepCust01
 {
     [Key]
@@ -15,9 +15,11 @@ public class ExcepCust01
     public String CustomerName { get; set; }
     [Column("cust_date")]
     public DateTime CustomerDate { get; set; }
+    
     [Column("status_tindak_lanjut")]
-    public int Status { get; set; }
+    public int TindakLanjutId { get; set; }
     public StatusTindakLanjut TindakLanjut { get; set; }
+    
     [Column("notes")]
     public String Notes { get; set; }
     [Column("last_updated_by")]
@@ -34,7 +36,7 @@ public class ExcepCust01
         CustomerNumber = customerNumber;
         CustomerName = customerName;
         CustomerDate = customerDate;
-        Status = status;
+        TindakLanjutId = status;
         Notes = notes;
         LastUpdatedBy = lastUpdatedBy;
         LastUpdatedAt = lastUpdatedAt;
