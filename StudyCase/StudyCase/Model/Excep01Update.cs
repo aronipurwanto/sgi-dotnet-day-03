@@ -1,6 +1,6 @@
 namespace StudyCase.Model;
 
-public class ExcepCustomerUpdate
+public class Excep01Update
 {
     public String CustomerNumber { get; set; }
     public String CustomerDate { get; set; }

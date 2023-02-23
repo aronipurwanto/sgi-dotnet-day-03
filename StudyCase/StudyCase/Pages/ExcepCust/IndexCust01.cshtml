@@ -33,7 +33,7 @@
                         <td>@item.LastUpdatedAt.ToString("dd-MM-yyyy")</td>
                         <td>@item.LastUpdatedBy</td>
                         <td>
-                            <a asp-page="Detail" asp-route-custNo="@item.CustomerNumber" asp-route-tgl="@item.CustomerDate.ToString("dd-MM-yyyy")">Detail</a>
+                            <a asp-page="./DetailCust01" asp-route-custNo="@item.CustomerNumber" asp-route-dataDate="@item.CustomerDate.ToString("dd-MM-yyyy")">Detail</a>
                         </td>
                     </tr>
                 }

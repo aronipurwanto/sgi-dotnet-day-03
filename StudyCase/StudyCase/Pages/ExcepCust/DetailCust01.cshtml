@@ -1,0 +1,61 @@
+@page
+@model StudyCase.Pages.ExcepCust.DetailCust01Model
+
+@{
+    Layout = "Shared/_Layout";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label>Customer Number</label>
+                <label>@Model.Data.Cust01.CustomerNumber</label>
+            </div>
+            <div class="form-group">
+                <label>Customer Name</label>
+                <label>@Model.Data.Cust01.CustomerName</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Tanggal</label>
+                <label>@Model.Data.Cust01.CustomerDate.ToString("dd-MM-yyyy")</label>
+            </div>
+            <div class="form-group">
+                <label>Tindak Lanjut</label>
+                <label>@Model.Data.Cust01.TindakLanjutId.ToString()</label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- detail data -->
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-responsive">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>CustomerAccount</th>
+                    <th>TransactionDate</th>
+                    <th>Branch Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                @{
+                    var no = 1;
+                }
+                @foreach (var item in Model.Data.Details)
+                {
+                    <tr>
+                        <td>@no</td>
+                        <td>@item.CustomerAccount</td>
+                        <td>@item.TransactionDate.ToString("dd-MM-yyyy hh:mm")</td>
+                        <td>@item.BranchName</td>
+                    </tr>
+                    no++;
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

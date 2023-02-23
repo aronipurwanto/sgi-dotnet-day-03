@@ -7,7 +7,7 @@ namespace StudyCase.Pages.ExcepCustomer;
 
 public class DetailModel : PageModel
 {
-    public ExcepCustomerUpdate Data { get; set; }
+    public Excep01Update Data { get; set; }
     public readonly CustomerService Service;
     public DetailModel()
     {
@@ -19,7 +19,7 @@ public class DetailModel : PageModel
         
     }
 
-    public async Task<IActionResult> OnPostAsync(ExcepCustomerUpdate Data)
+    public async Task<IActionResult> OnPostAsync(Excep01Update Data)
     {
         if (!ModelState.IsValid)
         {

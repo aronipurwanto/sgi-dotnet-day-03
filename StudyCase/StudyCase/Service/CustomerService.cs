@@ -6,7 +6,7 @@ namespace StudyCase.Service;
 public class CustomerService
 {
     //public ExcepCustomer UpdateData(String custNo, String date, int status)
-    public ExcepCust01 UpdateData(ExcepCustomerUpdate Data)
+    public ExcepCust01 UpdateData(Excep01Update Data)
     {
         DateTime customerDate = Convert.ToDateTime(Data.CustomerDate);
         // query data
