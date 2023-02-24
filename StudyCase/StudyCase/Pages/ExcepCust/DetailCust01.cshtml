@@ -4,6 +4,7 @@
 @{
     Layout = "Shared/_Layout";
 }
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -58,4 +59,12 @@
             </table>
         </div>
     </div>
+    
+    <form action="post" asp-page-handler="Post1">
+        <button type="submit">Button 1</button>
+    </form>
+    
+    <form action="post" asp-page-handler="Post2">
+        <button type="submit">Button 2</button>
+    </form>
 </div>

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StudyCase.Context;
 using StudyCase.Entity;
@@ -19,5 +20,16 @@ public class DetailCust01Model : PageModel
     public void OnGet(String custNo, String dataDate)
     {
         Data = DbService.GetData01(custNo, dataDate);
+        TempData["success"] = "Load data successfully..!";
+    }
+
+    public async Task<IActionResult> OnPost1()
+    {
+        return Page();
+    }
+    
+    public async Task<IActionResult> OnPost2()
+    {
+        return Page();
     }
 }

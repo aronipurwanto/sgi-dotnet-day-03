@@ -35,6 +35,7 @@ public class DbCustService
             join status in _Context.StatusTindakLanjuts on cus.TindakLanjutId equals status.Id
             select new Entity.ExcepCust01()
             {
+                Id = cus.Id,
                 TindakLanjut = status,
                 CustomerNumber = cus.CustomerNumber,
                 CustomerName = cus.CustomerName,

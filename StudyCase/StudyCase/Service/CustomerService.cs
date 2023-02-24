@@ -34,7 +34,6 @@ public class CustomerService
                 Notes = cus.Notes,
                 LastUpdatedBy = cus.LastUpdatedBy,
                 LastUpdatedAt = cus.LastUpdatedAt
-
             }).ToList();
         
         return query;
